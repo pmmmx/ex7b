@@ -9,10 +9,11 @@ function checkSID() {
 
 function checkCandiNo() {
   let candi = (document.getElementById("candi").value).trim();
-  if (isNaN(candi) || candi < 1) {
-    return false;
+  let num = Number(candi);
+  if (isNaN(num) && num >= 1 && num <= 10 ) {
+	return true;
   } else {
-    return true;
+	return false;
   }
 }
 
