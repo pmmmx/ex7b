@@ -1,9 +1,9 @@
 function checkSID() {
   let sid = (document.getElementById("sid").value).trim();
-  if (sid.length == 10) {
-    return true;
-  } else {
+  if (sid.length == 10 || isNaN(sid)) {
     return false;
+  } else {
+    return true;
   }
 }
 
